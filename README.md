@@ -1,17 +1,10 @@
-# UI-shuffle-and-short-numbers
- 
---author = "Umesh G <umesh.arnold@gmail.com>"
+# Shuffle and short a numbers
+HTML page displaying the shuffle and short numbers. That  have the following features.
+- Click the shuffle button to randomly rearrange the order of the cards
+- Click the sort button to place the cards in ascending order (1 – 9)
+- Responsive design Desktop - 960px and Mobile - 375px
 
-shuffle and short numbers using Javascript 
+# open source JavaScript libraries are used in this project
+- jquery.min.js
 
-The page consists of 9 numbered cards which can be manipulated by using the shuffle and short buttons.
 
-Using JavaScript, allow the user to:
-
-• Click the shuffle button to randomly
-rearrange the order of the cards
-
-• Click the sort button to place the
-cards in ascending order (1 – 9)
-
-Responsive design Desktop - 960px and Mobile - 375px
