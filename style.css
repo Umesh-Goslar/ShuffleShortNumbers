@@ -1,0 +1,107 @@
+body{
+    background-color: #e8e8e8;
+}
+#mainContent {
+    background-color: #ffffff;
+    padding: 1rem 1rem;
+    width: 476px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#btn {
+    display: block;
+    float: right;
+}
+
+.btnStyle {
+    background-color: #2B8EAD;
+    font: 300 normal .65rem / normal verdana;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-bottom: .25rem solid #1a647b;
+    border-radius: .25rem;
+    margin: .2rem .2rem;
+    cursor: pointer;
+    outline: none;
+    width: 6.5rem;
+}
+
+#numbersList {
+    max-width: 360px;
+}
+
+#numbersList>div {
+    float: left;
+    line-height: 30px;
+    width: 50px;
+    text-align: center;
+    color: #fff;
+    padding: 1.4rem 2rem;
+    font: 300 normal 3rem / normal verdana;
+}
+
+.color1 {
+    background-color: #6F98A8;
+}
+
+.color2 {
+    background-color: #2B8EAD;
+}
+
+.color3 {
+    background-color: #2F454E;
+}
+
+.color4 {
+    background-color: #BFBFBF;
+}
+
+/* Responsive  style for Mobile - 375px */
+@media only screen and (max-width: 375px) {
+    #mainContent {
+        width: auto;
+        background-color: #f9f9f9;
+    }
+
+    #btn {
+        display: flex;
+        width: 100%;
+    }
+
+    #numbersList {
+        width: 100%;
+        display: inline-grid;
+    }
+
+    #numbersList>div {
+        width: auto;
+        text-align: center;
+        color: #000000;
+        margin: .2rem .2rem;
+        padding: .2rem 2rem;
+        font: 300 normal 1.5rem / normal verdana;
+        background-color: #e8e8e8;
+    }
+
+    .color1 {
+        border-left: .4rem solid #6F98A8;
+    }
+
+    .color2 {
+        border-left: .4rem solid #2B8EAD;
+    }
+
+    .color3 {
+        border-left: .4rem solid #2F454E;
+    }
+
+    .color4 {
+        border-left: .4rem solid #BFBFBF;
+    }
+
+}

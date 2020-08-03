@@ -4,184 +4,32 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shuffle sort numbers</title>
-
-    <style>
-        #mainContent {
-            background-color: #e8e8e8;
-            padding: 1rem 1rem;
-            width: 476px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        #btn {
-            display: block;
-            float: right;
-        }
-
-        .btnStyle {
-            background-color: #2B8EAD;
-            font: 300 normal .65rem / normal verdana;
-            text-transform: uppercase;
-            color: #ffffff;
-            padding: 0.8rem 1.8rem;
-            border: none;
-            border-bottom: .25rem solid #1a647b;
-            border-radius: .25rem;
-            margin: .2rem .2rem;
-            cursor: pointer;
-            outline: none;
-            width: 6.5rem;
-        }
-
-        #cardNumbersList {
-            max-width: 360px;
-        }
-
-        #cardNumbersList>div {
-            float: left;
-            line-height: 30px;
-            width: 50px;
-            text-align: center;
-            color: #fff;
-            padding: 1.4rem 2rem;
-            font: 300 normal 3rem / normal verdana;
-        }
-
-        .color1 {
-            background-color: #6F98A8;
-        }
-
-        .color2 {
-            background-color: #2B8EAD;
-        }
-
-        .color3 {
-            background-color: #2F454E;
-        }
-
-        .color4 {
-            background-color: #BFBFBF;
-        }
-
-        /* Responsive  style for Mobile - 375px */
-        @media only screen and (max-width: 375px) {
-            #mainContent {
-                width: auto;
-                background-color: #f9f9f9;
-            }
-
-            #btn {
-                display: flex;
-                width: 100%;
-            }
-
-            #cardNumbersList {
-                width: 100%;
-                display: inline-grid;
-            }
-
-            #cardNumbersList>div {
-                width: auto;
-                text-align: center;
-                color: #000000;
-                margin: .2rem .2rem;
-                padding: .2rem 2rem;
-                font: 300 normal 1.5rem / normal verdana;
-                background-color: #e8e8e8;
-            }
-
-            .color1 {
-                border-left: .4rem solid #6F98A8;
-            }
-
-            .color2 {
-                border-left: .4rem solid #2B8EAD;
-            }
-
-            .color3 {
-                border-left: .4rem solid #2F454E;
-            }
-
-            .color4 {
-                border-left: .4rem solid #BFBFBF;
-            }
-
-        }
-    </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div id="mainContent">
         <div id="btn">
             <div>
-                <button class="btn_shuffle btnStyle" id="shuffle">Shuffle</button>
+                <button class="shuffleBtn btnStyle" id="shuffle">Shuffle</button>
             </div>
             <div>
-                <button class="btn_sort btnStyle" id="sort">Sort</button>
+                <button class="sortBtn btnStyle" id="sort">Sort</button>
             </div>
         </div>
-        <div id="cardNumbersList">
-            <div class="card color1">1</div>
-            <div class="card color2">2</div>
-            <div class="card color3">3</div>
-            <div class="card color2">4</div>
-            <div class="card color3">5</div>
-            <div class="card color4">6</div>
-            <div class="card color4">7</div>
-            <div class="card color1">8</div>
-            <div class="card color3">9</div>
+        <div id="numbersList">
+            <div class="number color1">1</div>
+            <div class="number color2">2</div>
+            <div class="number color3">3</div>
+            <div class="number color2">4</div>
+            <div class="number color3">5</div>
+            <div class="number color4">6</div>
+            <div class="number color4">7</div>
+            <div class="number color1">8</div>
+            <div class="number color3">9</div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script>
-        $("#shuffle").click(function () {
-            var cardNumbers = [];
-            $('.card').each(function () {
-                cardNumbers.push(this.innerHTML);
-            });
-            var theLength = cardNumbers.length - 1;
-            var toSwap;
-            var temp;
-            for (var i = theLength; i > 0; i--) {
-                toSwap = Math.floor(Math.random() * (i + 1));
-                temp = cardNumbers[i];
-                cardNumbers[i] = cardNumbers[toSwap];
-                cardNumbers[toSwap] = temp;
-            }
-            $('.card').each(function () {
-                this.innerHTML = cardNumbers[i];
-                i++;
-            });
-        });
-        $("#sort").click(function () {
-            var cardNumbers = [];
-            $('.card').each(function () {
-                cardNumbers.push(this.innerHTML);
-            });
-            var theLength = cardNumbers.length - 1;
-            var toSwap;
-            var temp;
-            for (var i = theLength; i > 0; i--) {
-                toSwap = Math.floor(Math.random() * (i + 1));
-                temp = cardNumbers[i];
-                cardNumbers[i] = cardNumbers[toSwap];
-                cardNumbers[toSwap] = temp;
-            }
-            cardNumbers.sort();
-
-            $('.card').each(function () {
-                this.innerHTML = cardNumbers[i];
-                i++;
-            });
-        });
-    </script>
-
+  <script src="shuffleSortNum.js"></script>
 </body>
-
 </html>
